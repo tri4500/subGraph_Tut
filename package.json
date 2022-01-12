@@ -1,0 +1,18 @@
+{
+  "name": "subgraph-tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "codegen": "graph codegen ./token/yaml",
+    "deploy": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ tri4500/subgraph-tutorial ./token.yaml --access-token"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.25.2",
+    "@graphprotocol/graph-ts": "^0.24.1",
+    "typescript": "^4.5.4"
+  }
+}

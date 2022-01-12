@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+description: Token Subgraph API
+schema:
+  file: ./token.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Transfer
+    network: mainnet
+    source:
+      address: '0xD9Ec3ff1f8be459Bb9369b4E79e9Ebcf7141C093'
+      abi: KAI
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      file: ./mapping/transfer.ts
+      entities:
+        - Transfer
+      abis:
+        - name: KAI
+          file: ./abis/KAI.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer

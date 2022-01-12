@@ -1,0 +1,11 @@
+type Exchange @entity {
+  id: ID!
+
+  from: String!
+
+  to: String!
+
+  block: BigInt!
+
+  amount: BigInt!
+}
