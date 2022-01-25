@@ -13,6 +13,10 @@
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.25.2",
     "@graphprotocol/graph-ts": "^0.24.1",
+    "request": "^2.88.2",
     "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/request": "^2.48.8"
   }
 }
